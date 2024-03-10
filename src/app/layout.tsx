@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-tarawera-900`}>
+      <body className={`${roboto.className} dark`}>
         <NavMenu />
         {children}
       </body>
