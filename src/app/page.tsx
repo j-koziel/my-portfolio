@@ -6,7 +6,7 @@ import { SkillsSection } from "@/components/sections/skills-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24 bg-tarawera-900 text-tarawera-50">
+    <main className="flex flex-col justify-between p-14">
       <HomeSection />
       <AboutSection />
       <SkillsSection />

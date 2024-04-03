@@ -1,4 +1,5 @@
 import { NavLink } from "@/types/links";
+import { ThemeModeToggle } from "./theme-mode-toggle";
 
 export function NavMenu() {
   const links: NavLink[] = [
@@ -28,7 +29,7 @@ export function NavMenu() {
       <a href="/" className={`font-bold p-3 rounded-md ${linkHoverAnimation}`}>
         Jonathan Koziel
       </a>
-      <section className="flex">
+      <section className="flex items-center">
         {links.map((link: NavLink, i: number) => (
           <a
             key={i}
@@ -38,6 +39,7 @@ export function NavMenu() {
             {link.label}
           </a>
         ))}
+        <ThemeModeToggle />
       </section>
     </nav>
   );
