@@ -17,7 +17,7 @@ export function Footer() {
         <h1 className="underline underline-offset-4 text-4xl text-primary">
           Jonathan Koziel
         </h1>
-        <div className="flex flex-col gap-6 text-2xl md:flex-row">
+        <div className="flex flex-col gap-6 text-2xl md:flex-row md:items-center">
           {links.map((link, i) => (
             <a href={link.link} key={i}>
               {link.label}

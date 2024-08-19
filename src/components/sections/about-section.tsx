@@ -2,25 +2,21 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 export function AboutSection() {
   return (
-    <article
-      className="min-h-screen flex flex-col justify-center gap-y-10"
-      id="about"
-    >
-      <header>
+    <article className="min-h-screen flex flex-col justify-center" id="about">
+      <div className="pb-4">
         <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl">About</h1>
-        <p role="doc-subtitle" className="text-xl opacity-70">
+        <p role="doc-subtitle" className="text-xl">
           Find out all about who I am and what I do
         </p>
-      </header>
-      <main>
-        <p>
-          As mentioned before my name is Jonathan and I am based in the UK. I
-          was born here but my parents were born in Poland. I am fluent in
-          polish and am able to have conversations with people. My love for web
-          development and programming started when I was in high school. I then
-          progressed further into college where I am currently studying for my
-          T-Level Digital Production, Design and Development certification. My
-          two main hobbies are photography and chess.
+      </div>
+      <main className="pb-10">
+        <p className="text-lg">
+          I am an aspiring software engineer, specializing in full-stack
+          development with over 1 year of professional experience in the
+          industry. I have a track record of improving software reliability and
+          functionality. Additionally, I am constantly learning new skills, am
+          adept at working with cross-functional teams and determined to provide
+          a high-quality solution at all times.
         </p>
       </main>
       <footer className="self-center">

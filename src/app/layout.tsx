@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jonathan Koziel | Web Developer",
+  title: "Jonathan Koziel | Full-Stack Developer",
   description:
     "This is a website showing off all of my projects, skills and hobbies",
 };

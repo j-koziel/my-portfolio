@@ -48,9 +48,7 @@ export function SkillsSection() {
     >
       <div>
         <h1 className="text-5xl">Skills and tools</h1>
-        <h2 className="text-primary text-4xl underline underline-offset-4">
-          that I use
-        </h2>
+        <h2 className="text-primary text-4xl font-bold">that I use.</h2>
       </div>
       <div className="w-full grid grid-cols-3 grid-rows-1 gap-5">
         {skills.map((skill, i) => (
