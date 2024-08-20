@@ -7,21 +7,19 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { BaseSection } from "./base-section";
 
 export function ContactSection() {
   return (
-    <BaseSection id="contact">
+    <div id="contact" className="min-h-screen flex items-center justify-center">
       <Card>
         <CardHeader>
-          <CardTitle>Contact me:</CardTitle>
+          <CardTitle>Contact me</CardTitle>
           <CardDescription>These are my contact methods</CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col items-center gap-y-2">
+        <CardContent className="flex items-center justify-evenly gap-y-2">
           <Button variant="link" size="icon" asChild>
             <a href="mailto:jonathankoziel1@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
@@ -29,7 +27,7 @@ export function ContactSection() {
           </Button>
           <Button variant="link" size="icon" asChild>
             <a
-              href="https://twitter.com/j0nathan_k0ziel"
+              href="https://twitter.com/yonat4n_"
               target="_blank"
               rel="noreferrer"
             >
@@ -46,10 +44,7 @@ export function ContactSection() {
             </a>
           </Button>
         </CardContent>
-        <CardFooter>
-          Feel free to message me about any opportunities :)
-        </CardFooter>
       </Card>
-    </BaseSection>
+    </div>
   );
 }
