@@ -4,7 +4,7 @@ export function ProjectsSection() {
       id="projects"
       className="min-h-screen flex items-center justify-center"
     >
-      This will be the projects section
+      Projects coming soon
     </main>
   );
 }
