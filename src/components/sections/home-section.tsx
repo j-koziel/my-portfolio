@@ -7,7 +7,7 @@ export function HomeSection() {
       className="min-h-screen text-tarawera-50 font-bold flex flex-col items-center"
       id="home"
     >
-      <div className="flex">
+      <div className="flex flex-col">
         <Image
           src="/profile_picture.jpg"
           alt="Me"
