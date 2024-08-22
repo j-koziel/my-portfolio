@@ -1,8 +1,9 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+
 import { NavMenu } from "@/components/nav-menu";
-import "./globals.css";
-import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -30,7 +31,6 @@ export default function RootLayout({
         >
           <NavMenu />
           {children}
-          <Footer />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
