@@ -15,9 +15,11 @@ export function ContactSection() {
       <Card>
         <CardHeader>
           <CardTitle>Contact me</CardTitle>
-          <CardDescription>These are my contact methods</CardDescription>
+          <CardDescription>
+            Use any of these methods to contact me about opportunities
+          </CardDescription>
         </CardHeader>
-        <CardContent className="flex items-center justify-evenly gap-y-2">
+        <CardContent className="flex items-center justify-center gap-y-2 gap-x-2">
           <Button variant="link" size="icon" asChild>
             <a href="mailto:jonathankoziel1@gmail.com">
               <EnvelopeClosedIcon height={36} width={36} />
