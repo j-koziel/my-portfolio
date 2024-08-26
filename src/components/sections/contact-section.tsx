@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 import { Button } from "../ui/button";
 import {
@@ -22,16 +20,7 @@ export function ContactSection() {
         <CardContent className="flex items-center justify-evenly gap-y-2">
           <Button variant="link" size="icon" asChild>
             <a href="mailto:jonathankoziel1@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-          </Button>
-          <Button variant="link" size="icon" asChild>
-            <a
-              href="https://twitter.com/yonat4n_"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
+              <EnvelopeClosedIcon height={36} width={36} />
             </a>
           </Button>
           <Button variant="link" size="icon" asChild>
@@ -40,7 +29,7 @@ export function ContactSection() {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <LinkedInLogoIcon height={36} width={36} />
             </a>
           </Button>
         </CardContent>
