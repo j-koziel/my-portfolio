@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import { NavMenu } from "../src/components/nav-menu";
 
 describe("Navigation menu", () => {

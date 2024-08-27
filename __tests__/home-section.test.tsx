@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import { HomeSection } from "../src/components/sections/home-section";
-import { describe } from "node:test";
 
 describe("Home section", () => {
   it("renders the profile picture", () => {
