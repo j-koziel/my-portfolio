@@ -34,17 +34,18 @@ export function ProjectsSection() {
       </div>
       <div className="flex flex-col gap-y-2">
         {projectsData.map((project, i) => (
-          <Card key={i}>
+          <Card key={i} className="flex flex-row-reverse items-center">
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex items-center justify-center">
+            <CardContent className="flex flex-col items-center justify-center">
               <Image
                 src={project.img}
                 height={200}
                 width={200}
                 alt={project.img_alt}
+                className="rounded-md"
               />
             </CardContent>
           </Card>
