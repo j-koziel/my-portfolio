@@ -5,7 +5,7 @@ import { ProjectsSection } from "@/components/sections/projects-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between p-14">
+    <main className="flex flex-col justify-between p-10">
       <HomeSection />
       <AboutSection />
       <ProjectsSection />
