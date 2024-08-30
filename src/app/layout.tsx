@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import { NavMenu } from "@/components/nav-menu";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Providers from "@/components/providers";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
@@ -23,15 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           <NavMenu />
           {children}
-        </ThemeProvider>
+        </Providers>
         <Analytics />
         <SpeedInsights />
       </body>
