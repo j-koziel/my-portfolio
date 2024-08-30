@@ -1,0 +1,3 @@
+#projects-container::-webkit-scrollbar {
+  display: none;
+}

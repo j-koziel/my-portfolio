@@ -13,10 +13,6 @@ export function HomeSection() {
       href: "#about",
     },
     {
-      label: "Skills",
-      href: "#skills",
-    },
-    {
       label: "Projects",
       href: "#projects",
     },
