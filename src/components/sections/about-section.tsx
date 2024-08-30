@@ -22,9 +22,9 @@ export function AboutSection() {
       <footer className="self-center">
         <a
           className="flex items-center gap-x-1 font-bold transition-all hover:text-primary"
-          href="#skills"
+          href="#projects"
         >
-          Scroll below to checkout the skills and tools that I use
+          Scroll below to check out the projects that I have made
           <ChevronDownIcon />
         </a>
       </footer>
