@@ -34,7 +34,7 @@ export function ProjectsSection() {
   ];
 
   return (
-    <main
+    <div
       id="projects"
       className="min-h-screen flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly"
     >
@@ -70,10 +70,20 @@ export function ProjectsSection() {
                 className="rounded-md"
               />
               <div className="w-full flex items-center justify-evenly md:items-center md:justify-evenly">
-                <Link href={project.link} target="_blank" rel="noreferrer">
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:scale-110 transition-all"
+                >
                   <ExternalLinkIcon height={24} width={24} />
                 </Link>
-                <Link href={project.gh_link} target="_blank" rel="noreferrer">
+                <Link
+                  href={project.gh_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:scale-110 transition-all flex flex-col items-center"
+                >
                   <GitHubLogoIcon height={24} width={24} />
                 </Link>
               </div>
@@ -81,6 +91,6 @@ export function ProjectsSection() {
           </Card>
         ))}
       </div>
-    </main>
+    </div>
   );
 }
