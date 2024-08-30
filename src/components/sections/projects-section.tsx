@@ -11,6 +11,7 @@ import {
 import "./hidden-scrollbar.css";
 import Link from "next/link";
 import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function ProjectsSection() {
   const projectsData = [
@@ -34,7 +35,7 @@ export function ProjectsSection() {
   ];
 
   return (
-    <main
+    <div
       id="projects"
       className="min-h-screen flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly"
     >
@@ -70,17 +71,41 @@ export function ProjectsSection() {
                 className="rounded-md"
               />
               <div className="w-full flex items-center justify-evenly md:items-center md:justify-evenly">
-                <Link href={project.link} target="_blank" rel="noreferrer">
-                  <ExternalLinkIcon height={24} width={24} />
-                </Link>
-                <Link href={project.gh_link} target="_blank" rel="noreferrer">
-                  <GitHubLogoIcon height={24} width={24} />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:scale-110 transition-all"
+                    >
+                      <ExternalLinkIcon height={24} width={24} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    Click here to check out the project ✨
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      href={project.gh_link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:scale-110 transition-all"
+                    >
+                      <GitHubLogoIcon height={24} width={24} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    Check out the source code on GitHub 💻
+                  </TooltipContent>
+                </Tooltip>
               </div>
             </CardContent>
           </Card>
         ))}
       </div>
-    </main>
+    </div>
   );
 }
