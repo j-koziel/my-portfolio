@@ -40,6 +40,7 @@ export function HomeSection() {
           width={450}
           height={450}
           className="rounded-full"
+          priority={true}
         />
       </motion.div>
 

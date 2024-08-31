@@ -1,18 +1,44 @@
-import { ChevronDownIcon } from "@radix-ui/react-icons";
+"use client";
 
-export function AboutSection() {
+import * as React from "react";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { useInView } from "framer-motion";
+
+const Heading = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div
-      className="min-h-screen w-full flex justify-center items-center"
-      id="about"
-    >
-      <div className="pb-4 w-1/2">
-        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl">About</h1>
+    <div className="pb-4" ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        <h1 className="font-bold text-5xl md:text-6xl lg:text-8xl">About</h1>
         <p role="doc-subtitle" className="text-xl">
           Find out all about who I am and what I do
         </p>
       </div>
-      <div className="w-1/2 flex flex-col">
+    </div>
+  );
+};
+
+const Content = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div className="w-1/2 flex flex-col" ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
         <p className="text-lg pb-10">
           I am an aspiring software engineer, specializing in full-stack
           development with over 1 year of professional experience in the
@@ -32,6 +58,18 @@ export function AboutSection() {
           </a>
         </div>
       </div>
+    </div>
+  );
+};
+
+export function AboutSection() {
+  return (
+    <div
+      className="min-h-screen w-full flex justify-evenly items-center"
+      id="about"
+    >
+      <Heading />
+      <Content />
     </div>
   );
 }
