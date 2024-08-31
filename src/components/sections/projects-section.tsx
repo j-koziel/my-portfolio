@@ -1,4 +1,11 @@
+"use client";
+
+import "./hidden-scrollbar.css";
 import Image from "next/image";
+import Link from "next/link";
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { useInView } from "framer-motion";
+import * as React from "react";
 
 import {
   Card,
@@ -7,11 +14,54 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-
-import "./hidden-scrollbar.css";
-import Link from "next/link";
-import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+
+const Heading = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        <h1 className="font-bold text-5xl mb-3 md:mb-3 md:text-6xl lg:text-8xl">
+          Projects
+        </h1>
+        <p className="mb-10 md:mb-0">
+          These are my side projects which have helped me to develop my software
+          development skills
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const Content = ({ children }: { children: React.ReactNode }) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div id="projects-container" ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+        }}
+        className="h-[500px] flex flex-col gap-y-4 overflow-scroll p-4"
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
 
 export function ProjectsSection() {
   const projectsData = [
@@ -39,23 +89,8 @@ export function ProjectsSection() {
       id="projects"
       className="min-h-screen flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly"
     >
-      <div>
-        <h1 className="font-bold text-5xl mb-3 md:mb-3 md:text-6xl lg:text-8xl">
-          Projects
-        </h1>
-        <p className="mb-10 md:mb-0">
-          These are my side projects which have helped me to develop my software
-          development skills
-        </p>
-      </div>
-      <div
-        id="projects-container"
-        className="h-[500px] flex flex-col gap-y-4 overflow-scroll p-4"
-        style={{
-          msOverflowStyle: "none",
-          scrollbarWidth: "none",
-        }}
-      >
+      <Heading />
+      <Content>
         {projectsData.map((project, i) => (
           <Card key={i}>
             <CardHeader>
@@ -105,7 +140,7 @@ export function ProjectsSection() {
             </CardContent>
           </Card>
         ))}
-      </div>
+      </Content>
     </div>
   );
 }
