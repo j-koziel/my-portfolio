@@ -2,10 +2,15 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
 import { ProjectsSection } from "../src/components/sections/projects-section";
+import { TooltipProvider } from "../src/components/ui/tooltip";
 
 describe("Projects section", () => {
   it("renders the section heading", () => {
-    render(<ProjectsSection />);
+    render(
+      <TooltipProvider>
+        <ProjectsSection />
+      </TooltipProvider>
+    );
 
     const heading = screen.getByRole("heading", { level: 1 });
 
@@ -13,7 +18,11 @@ describe("Projects section", () => {
   });
 
   it("renders the project cards", () => {
-    render(<ProjectsSection />);
+    render(
+      <TooltipProvider>
+        <ProjectsSection />
+      </TooltipProvider>
+    );
 
     const projectHeadings = screen.getAllByRole("heading", { level: 3 });
     const projectDescriptions = screen.getAllByRole("paragraph");
