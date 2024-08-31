@@ -9,7 +9,7 @@ const Heading = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="pb-4 w-1/2" ref={ref}>
+    <div className="pb-4" ref={ref}>
       <div
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
@@ -17,7 +17,7 @@ const Heading = () => {
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
-        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl">About</h1>
+        <h1 className="font-bold text-5xl md:text-6xl lg:text-8xl">About</h1>
         <p role="doc-subtitle" className="text-xl">
           Find out all about who I am and what I do
         </p>
@@ -65,7 +65,7 @@ const Content = () => {
 export function AboutSection() {
   return (
     <div
-      className="min-h-screen w-full flex justify-center items-center"
+      className="min-h-screen w-full flex justify-evenly items-center"
       id="about"
     >
       <Heading />
