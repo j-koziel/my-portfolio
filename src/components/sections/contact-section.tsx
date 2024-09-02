@@ -11,7 +11,7 @@ import {
 
 export function ContactSection() {
   return (
-    <div id="contact" className="min-h-screen flex items-center justify-center">
+    <div id="contact" className="mt-10 flex items-center justify-center">
       <Card>
         <CardHeader>
           <CardTitle>Contact me</CardTitle>

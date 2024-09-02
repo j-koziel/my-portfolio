@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import { useInView } from "framer-motion";
@@ -17,7 +17,7 @@ export function Heading() {
         }}
       >
         <h1 className="font-bold text-5xl md:text-6xl lg:text-8xl">About</h1>
-        <h3 className="text-xl">Find out all about who I am and what I do</h3>
+        <h3 className="text-lg">Find out all about who I am and what I do</h3>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ export function ProjectsSection() {
   return (
     <div
       id="projects"
-      className="min-h-screen flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly"
+      className="w-full mt-10 pt-5 flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly"
     >
       <Heading />
       <Content>
