@@ -20,7 +20,7 @@ export function HomeSection() {
   ];
 
   return (
-    <main className="text-tarawera-50 font-bold flex flex-col items-center md:flex-row md:justify-center md:items-center">
+    <main className="text-tarawera-50 font-bold flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center">
       <TitleImage />
       <div className="flex flex-col">
         <Heading />

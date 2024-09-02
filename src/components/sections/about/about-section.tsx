@@ -4,7 +4,7 @@ import { Content } from "./content";
 export function AboutSection() {
   return (
     <div
-      className="min-h-screen w-full flex justify-evenly items-center"
+      className="w-full mt-10 pt-5 flex flex-col md:mt-0 md:flex-row md:justify-evenly md:items-center"
       id="about"
     >
       <Heading />

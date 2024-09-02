@@ -9,13 +9,14 @@ export function Content() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="w-1/2 flex flex-col" ref={ref}>
+    <div className="lg:w-1/2" ref={ref}>
       <div
         style={{
           transform: isInView ? "none" : "translateX(200px)",
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
+        className="flex flex-col items-center"
       >
         <p className="text-lg pb-10">
           I am an aspiring software engineer, specializing in full-stack
@@ -25,14 +26,14 @@ export function Content() {
           adept at working with cross-functional teams and determined to provide
           a high-quality solution at all times.
         </p>
-        <div className="self-center">
+        <div>
           <a
             className="flex items-center gap-x-1 font-bold transition-all hover:text-primary"
             href="#projects"
           >
             Scroll below or click here to check out the projects that I have
             made
-            <ChevronDownIcon />
+            <ChevronDownIcon height={24} width={24} />
           </a>
         </div>
       </div>
