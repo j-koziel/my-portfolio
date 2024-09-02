@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-import { ProjectsSection } from "../src/components/sections/projects-section";
+import { ProjectsSection } from "../src/components/sections/projects/projects-section";
 import { TooltipProvider } from "../src/components/ui/tooltip";
 
 describe("Projects section", () => {
