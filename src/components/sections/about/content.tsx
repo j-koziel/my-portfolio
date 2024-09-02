@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { useInView } from "framer-motion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";

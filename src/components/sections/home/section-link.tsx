@@ -1,3 +1,5 @@
+"use client"
+
 import { NavLink } from "@/types/links";
 import { motion } from "framer-motion";
 
