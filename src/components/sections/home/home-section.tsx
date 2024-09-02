@@ -26,7 +26,7 @@ export function HomeSection() {
         <Heading />
         <div className="flex flex-col items-center">
           {links.map((link: NavLink, i: number) => (
-            <SectionLink link={link} index={i} />
+            <SectionLink link={link} index={i} key={i} />
           ))}
         </div>
       </div>
