@@ -1,13 +1,13 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-import { AboutSection } from "../src/components/sections/about-section";
+import { AboutSection } from "../src/components/sections/about/about-section";
 
 describe("About section", () => {
   it("renders the heading", () => {
     render(<AboutSection />);
 
-    const aboutSectionHeading = screen.getByRole("heading");
+    const aboutSectionHeading = screen.getByRole("heading", { level: 1 });
 
     expect(aboutSectionHeading).toBeInTheDocument();
   });

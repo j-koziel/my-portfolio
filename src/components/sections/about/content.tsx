@@ -1,18 +1,23 @@
+"use client";
+
+import * as React from "react";
+import { useInView } from "framer-motion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
-export function AboutSection() {
+export function Content() {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div
-      className="min-h-screen w-full flex justify-center items-center"
-      id="about"
-    >
-      <div className="pb-4 w-1/2">
-        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl">About</h1>
-        <p role="doc-subtitle" className="text-xl">
-          Find out all about who I am and what I do
-        </p>
-      </div>
-      <div className="w-1/2 flex flex-col">
+    <div className="lg:w-1/2" ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className="flex flex-col items-center"
+      >
         <p className="text-lg pb-10">
           I am an aspiring software engineer, specializing in full-stack
           development with over 1 year of professional experience in the
@@ -21,14 +26,14 @@ export function AboutSection() {
           adept at working with cross-functional teams and determined to provide
           a high-quality solution at all times.
         </p>
-        <div className="self-center">
+        <div>
           <a
             className="flex items-center gap-x-1 font-bold transition-all hover:text-primary"
             href="#projects"
           >
             Scroll below or click here to check out the projects that I have
             made
-            <ChevronDownIcon />
+            <ChevronDownIcon height={24} width={24} />
           </a>
         </div>
       </div>
