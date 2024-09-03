@@ -17,7 +17,7 @@ export function Content({ children }: { children: React.ReactNode }) {
           msOverflowStyle: "none",
           scrollbarWidth: "none",
         }}
-        className="h-[500px] flex flex-col gap-y-4 overflow-scroll p-4"
+        className="h-[550px] flex flex-col gap-y-4 overflow-scroll p-4"
       >
         {children}
       </div>
