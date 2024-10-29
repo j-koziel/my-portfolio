@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { ThemeModeToggle } from "./theme-mode-toggle";
+import Link from "next/link";
 
 export function NavMenu() {
   const linkHoverAnimation =
@@ -18,9 +19,12 @@ export function NavMenu() {
         transition: { duration: 0.5, ease: "easeInOut" },
       }}
     >
-      <a href="/" className={`font-bold p-3 rounded-md ${linkHoverAnimation}`}>
+      <Link
+        href="/"
+        className={`font-bold p-3 rounded-md ${linkHoverAnimation}`}
+      >
         Jonathan Koziel
-      </a>
+      </Link>
       <ThemeModeToggle />
     </motion.nav>
   );
