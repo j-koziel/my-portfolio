@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function Heading() {
   return (
@@ -12,7 +12,7 @@ export function Heading() {
       }}
       className="text-xs md:text-lg mb-4"
     >
-      Hello! My name is Jonathan and I am a Full-Stack Developer
+      <div>Hello! My name is Jonathan and I am a Full-Stack Developer</div>
     </motion.p>
   );
 }

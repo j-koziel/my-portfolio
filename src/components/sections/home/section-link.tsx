@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { NavLink } from "@/types/links";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function SectionLink({ link, index }: { link: NavLink; index: number }) {
   const linkHoverAnimation =
