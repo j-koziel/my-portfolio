@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
 export function Content({ children }: { children: React.ReactNode }) {
   const ref = React.useRef(null);

@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { HTMLAttributes } from "react";
+import { motion } from "motion/react";
 
 export function Heading() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { ThemeModeToggle } from "./theme-mode-toggle";
 import Link from "next/link";
