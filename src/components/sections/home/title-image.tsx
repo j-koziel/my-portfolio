@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
+import ProfilePicture from "../../../../public/profile_picture.jpg";
+
 export function TitleImage() {
   return (
     <motion.div
@@ -13,12 +15,12 @@ export function TitleImage() {
       }}
     >
       <Image
-        src="/profile_picture.jpg"
+        src={ProfilePicture}
         alt="Me"
         className="rounded-full mb-4 w-[150px] h-[150px] md:w-[250px] md:h-[250px] lg:w-[450px] lg:h-[450px]"
-        priority={true}
-        width={150}
-        height={150}
+        unoptimized={false}
+        // width={450}
+        // height={450}
       />
     </motion.div>
   );
